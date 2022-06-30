@@ -77,7 +77,7 @@ const Screen = (props: any) => {
         const isValidMoney = numb >= 1 && numb <= 1000;
         setIsVisibleMoney(!isValidMoney)
         if(isValid && isValidMoney){
-            
+
         }
     }
 

@@ -5,21 +5,26 @@ import styled from "styled-components";
 import Link from "next/link";
 
 const Border = styled.div`
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    background-color: #9999;
-    padding: 5px 10px;
-    border-radius: 20px;
+display: flex;
+flex-direction: column;
+text-align: center;
+padding: 5px 10px;
+border-radius: 10px;
+border: 3px solid #711C91;
 `
 
 const Title = styled.div`
-    font-size: 16px;
-    cursor: pointer;
-    background-color: white;
-    margin: 5px 0;
-    padding: 5px 10px;
-    border-radius: 10px
+font-family: 'Finlandica', sans-serif;
+font-size: 24px;
+cursor: pointer;
+background-color: #711C91;
+color: white;
+margin: 5px 0;
+padding: 5px 10px;
+border-radius: 10px;
+&:hover{
+background-color: #800080;
+}
 `
 
 const Home: NextPage = () => {
