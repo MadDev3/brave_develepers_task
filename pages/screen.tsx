@@ -10,9 +10,9 @@ flex-direction: column;
 padding: 10px;
 `
 
-const Input = styled.input`
+const Label = styled.label`
 font-size: 20px;
-margin: 5px 0
+font-family: 'Finlandica', sans-serif;
 `
 
 const Screen = (props: any) => {
@@ -28,7 +28,6 @@ const Screen = (props: any) => {
         else {
             setMoney(target.value)
         }
-        //const price = num + ' ₽'
     }
 
     return(
@@ -36,8 +35,31 @@ const Screen = (props: any) => {
             <div className={styles.main}>
                 <Form>
                     МТС
-                    <InputMask onChange={onChange} name='phone' value={phone} mask='+7 (999) 999 99 99'  placeholder='8 (999) 000-00-00'/>
-                    <InputMask onChange={onChange} maskChar='' name='money' value={money} mask={'₽ 9999'} placeholder='0 ₽'/>
+                    <Label htmlFor='phone'>
+                        Введите номер телефона:
+                    </Label>
+                    <InputMask
+                        id='phone'
+                        className='input-mask'
+                        onChange={onChange}
+                        name='phone'
+                        value={phone}
+                        mask='+7 (999) 999 99 99'
+                        placeholder='8 (999) 000-00-00'
+                    />
+                    <Label htmlFor='price'>
+                        Укажите сумму:
+                    </Label>
+                    <InputMask
+                        id='price'
+                        className='input-mask'
+                        onChange={onChange}
+                        maskChar=''
+                        name='money'
+                        value={money}
+                        mask={'₽ 9999'}
+                        placeholder='0 ₽'
+                    />
                 </Form>
             </div>
         </div>
