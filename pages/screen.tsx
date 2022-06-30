@@ -2,6 +2,7 @@ import {useState} from "react";
 import styled from "styled-components";
 import styles from '../styles/Home.module.css'
 import InputMask from 'react-input-mask';
+import Link from "next/link";
 
 const Form = styled.div`
 border: 3px solid #711C91;
@@ -53,6 +54,26 @@ font-weight: 600;
 font-family: 'Finlandica', sans-serif;
 `
 
+const Back = styled.input`
+font-family: 'Finlandica', sans-serif;
+background-color: white;
+border: 3px solid #711C91;
+padding: 3px 0;
+color: #711C91;
+border-radius: 50px;
+font-weight: 700;
+font-size: 24px;
+margin-bottom: 10px;
+text-transform: uppercase;
+&:hover{
+background-color: #711C91;
+color: white;
+}
+&:active{
+background-color: #BA55D3;
+}
+`
+
 const Screen = (props: any) => {
 
     const [phone, setPhone] = useState('');
@@ -85,6 +106,12 @@ const Screen = (props: any) => {
         <div className={styles.container}>
             <div className={styles.main}>
                 <Form>
+                    <Link href={'/'}>
+                        <Back
+                            type='button'
+                            value='Назад'
+                        />
+                    </Link>
                     <Title>МТС</Title>
                     <Label htmlFor='phone'>
                         Введите номер телефона:
