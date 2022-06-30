@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import styles from '../styles/Home.module.css'
 import {useState} from "react";
 import styled from "styled-components";
+import Link from "next/link";
 
 const Border = styled.div`
     display: flex;
@@ -32,7 +33,7 @@ const Home: NextPage = () => {
       <main className={styles.main}>
           <Border>
           {operators.map((operator: string, index: number) =>
-              <Title key={index}> {operator}</Title>
+              <Link key={index} href={'/screen'}><Title>{operator}</Title></Link>
           )}
           </Border>
       </main>
