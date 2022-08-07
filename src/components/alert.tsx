@@ -1,4 +1,4 @@
-import {Button} from "../../pages/id.styled";
+import {Button} from "../../styles/id.styled";
 import {Modal, Background, Window, Message} from "./alert.styled";
 
 const Alert = (props: any) => {

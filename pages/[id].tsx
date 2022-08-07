@@ -3,7 +3,7 @@ import InputMask from 'react-input-mask';
 import Link from "next/link";
 import {useRouter} from "next/router";
 import {operators} from "../src/constants";
-import {Back, Title, Label, Form, Button, Warning} from "./id.styled";
+import {Back, Title, Label, Form, Button, Warning} from "../styles/id.styled";
 import Alert from "../src/components/alert";
 import {Get} from "../src/request";
 import {Container, Main} from "../styles/global.styled";

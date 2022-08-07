@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Link from "next/link";
 import {operators} from "../src/constants";
 import {Container, Main} from "../styles/global.styled";
-import {Border, Title} from "./index.styled";
+import {Border, Title} from "../styles/index.styled";
 
 
 const Home: NextPage = () => {
