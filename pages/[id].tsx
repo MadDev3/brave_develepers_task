@@ -4,7 +4,7 @@ import Link from "next/link";
 import {useRouter} from "next/router";
 import {router} from "next/client";
 import {operators} from "../src/constants";
-import {Back, Title, Label, Form, Button} from "./id.styled";
+import {Back, Title, Label, Form, Button, Warning} from "./id.styled";
 import Alert from "../src/components/alert";
 import {Get} from "../src/request";
 import {Container, Main} from "../styles/global.styled";
@@ -89,12 +89,12 @@ const Id = () => {
                         onChange={onChange}
                         name='phone'
                         value={phone}
-                        maskChar=''
+                        maskPlaceholder={null}
                         mask='+7 (999) 999 99 99'
                         placeholder='+7 (999) 000-00-00'
                     />
                     {isVisible &&
-                        <Alert>Введите верный телефон</Alert>
+                        <Warning>Введите верный телефон</Warning>
                     }
                     <Label htmlFor='price'>
                         Укажите сумму:
@@ -103,14 +103,14 @@ const Id = () => {
                         id='price'
                         className='input-mask'
                         onChange={onChange}
-                        maskChar=''
                         name='money'
                         value={money}
+                        maskPlaceholder={null}
                         mask={'₽ 9999'}
                         placeholder='₽'
                     />
                     {isVisibleMoney &&
-                    <Alert>Укажите сумму от 1 до 1000</Alert>
+                    <Warning>Укажите сумму от 1 до 1000</Warning>
                     }
                     <Button
                         onClick={Pay}

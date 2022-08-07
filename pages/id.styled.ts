@@ -6,7 +6,7 @@ display: flex;
 flex-direction: column;
 padding: 10px;
 border-radius: 10px;
-font-size: 2em;
+font-size: 1.5em;
 @media (max-width: 820px){
     width: 90%;
     font-size: 3em;
@@ -14,7 +14,6 @@ font-size: 2em;
 @media (max-width: 375px){
     font-size: 1.8em;
 }
-font-size: 24px;
 `
 
 export const Title = styled.div`
@@ -79,5 +78,21 @@ background-color: #BA55D3;
 }
 @media (max-width: 820px){
     font-size: 0.6em;
+}
+`
+
+export const Warning = styled.div`
+margin-top: -5px;
+margin-bottom: 5px;
+color: #711C91;
+font-weight: 600;
+font-family: 'Finlandica', sans-serif;
+font-size: 0.6em;
+@media (max-width: 820px){
+    width: 90%;
+    font-size: 0.4em;
+}
+@media (max-width: 375px){
+    font-size: 0.5em;
 }
 `
