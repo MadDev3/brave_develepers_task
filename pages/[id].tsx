@@ -2,7 +2,6 @@ import {useState} from "react";
 import InputMask from 'react-input-mask';
 import Link from "next/link";
 import {useRouter} from "next/router";
-import {router} from "next/client";
 import {operators} from "../src/constants";
 import {Back, Title, Label, Form, Button, Warning} from "./id.styled";
 import Alert from "../src/components/alert";
@@ -19,9 +18,9 @@ const Id = () => {
 
     const [isSuccess, setSuccess] = useState(false);
     const [isShow, setIsShow] = useState(false);
-    const {query} = useRouter()
+    const router = useRouter()
 
-    const operator: string | undefined = operators.find(item => item.id == Number(query.id))?.name;
+    const operator: string | undefined = operators.find(item => item.id == Number(router.query.id))?.name;
 
     function onChange(e: { target: {name: string, value: string} }){
         const target = e.target;
