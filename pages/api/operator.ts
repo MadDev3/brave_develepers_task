@@ -9,12 +9,6 @@ export default function handler(
     res: NextApiResponse<Data>
 ) {
     const result: number = Math.floor(Math.random() * 2);
-    let status: boolean;
-    if(result === 0){
-        status = false;
-    }
-    else{
-        status = true;
-    }
+    const status: boolean = result === 1;
     res.status(200).json({ status: status })
 }
